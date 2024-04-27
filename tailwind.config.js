@@ -4,6 +4,9 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       fontFamily: {
         dm: ['"DM Sans"', ...fontFamily.sans]
@@ -11,9 +14,10 @@ export default {
     },
     colors: {
       n: {
-        1: '#1B1D1F',
-        2: '#6F757C',
-        3: '#111315',
+        1: '#111315',
+        2: '#1B1D1F',
+        3: '#6F757C',
+
       },
       green: '#BEE3CC',
       cream: '#FEF7EE',
