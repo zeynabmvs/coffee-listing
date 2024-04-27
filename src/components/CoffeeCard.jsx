@@ -3,7 +3,8 @@ import starFill from "../design/Star_fill.svg";
 
 const CoffeeCard = ({ data }) => {
   return (
-    <div className="rounded-lg flex flex-col gap-[10px] pb-9">
+    <div className="rounded-lg flex flex-col gap-[10px] pb-9 relative">
+      {data.popular && <span className="absolute left-3 top-3 text-sm bg-yellow rounded-full px-2 py-1  text-n-1">Popular</span>}
       <img src={data.image} alt={data.name} className="w-full object-cover rounded-lg overflow-hidden" />
       <div className="flex justify-between items-center">
         <h2>{data.name}</h2>
