@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div
-        className={`w-full bg-[url('./design/bg-cafe.jpg')] bg-no-repeat bg-cover bg-center h-[265px] md:w-[300px]`}
+        className={`w-full bg-[url('./design/bg-cafe.jpg')] bg-no-repeat bg-cover bg-center h-[265px] `}
       ></div>
       <div className={`bg-n-2 rounded-xl container w-[70%] -mt-[120px] mb-[120px] md:-mt-[134px] pt-[85px] relative`}>
         <div className="w-[90%] mx-auto ">
