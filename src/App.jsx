@@ -20,14 +20,17 @@ function App() {
       <div
         className={`w-full bg-[url('./design/bg-cafe.jpg')] bg-no-repeat bg-cover bg-center h-[265px] md:w-[300px]`}
       ></div>
-      <div className="bg-n-2 rounded-xl container w-[70%] -mt-[120px] mb-[120px] md:-mt-[134px] pt-[85px]">
-        <div className="w-[90%] mx-auto">
+      <div className={`bg-n-2 rounded-xl container w-[70%] -mt-[120px] mb-[120px] md:-mt-[134px] pt-[85px] relative`}>
+        <div className="w-[90%] mx-auto ">
+          
+          <div className=" bg-[url('./design/vector.svg')] bg-no-repeat bg-right-top pb-4">
           <h1 className="text-center text-heading mb-4 tracking-wider">Our Collection</h1>
-          <p className="text-center text-body mb-4 text-n-3">
+          <p className="text-body text-n-3 max-w-[500px] mx-auto text-center">
             Introducing our Coffee Collection, a selection of unique coffees
             from different roast types and origins, expertly roasted in small
             batches and shipped fresh weekly.
           </p>
+          </div>
 
           <div className="flex gap-4 justify-center mb-9 items-center">
             <span className={`button ${(filter=== 'all') && 'active'} `} onClick={() => setfilter("all")}>All Products</span>
