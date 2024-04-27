@@ -18,26 +18,28 @@ function App() {
   return (
     <>
       <div
-        className={` bg-[url('./design/bg-cafe.jpg')] bg-no-repeat bg-cover bg-center h-40`}
+        className={`w-full bg-[url('./design/bg-cafe.jpg')] bg-no-repeat bg-cover bg-center h-[265px] md:w-[300px]`}
       ></div>
-      <div className="bg-n-2 rounded-md container">
-        <h1>Our Collection</h1>
-        <p>
-          Introducing our Coffee Collection, a selection of unique coffees from
-          different roast types and origins, expertly roasted in small batches
-          and shipped fresh weekly.
-        </p>
+      <div className="bg-n-2 rounded-xl container w-[70%] -mt-[120px] mb-[120px] md:-mt-[134px] pt-[85px]">
+        <div className="w-[90%] mx-auto">
+          <h1 className="text-center text-heading mb-4 tracking-wider">Our Collection</h1>
+          <p className="text-center text-body mb-4 text-n-3">
+            Introducing our Coffee Collection, a selection of unique coffees
+            from different roast types and origins, expertly roasted in small
+            batches and shipped fresh weekly.
+          </p>
 
-        <div>
-          <span onClick={() => setfilter("all")}>All Products</span>
-          <span onClick={() => setfilter("available")}>Available Now</span>
-          <span onClick={() => setfilter("popular")}>Popular</span>
-        </div>
+          <div className="flex gap-4 justify-center mb-9 items-center">
+            <span className={`button ${(filter=== 'all') && 'active'} `} onClick={() => setfilter("all")}>All Products</span>
+            <span className={`button ${(filter=== 'available') && 'active'} `} onClick={() => setfilter("available")}>Available Now</span>
+            <span className={`button ${(filter=== 'popular') && 'active'} `} onClick={() => setfilter("popular")}>Popular</span>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProducts.map((item) => (
-            <CoffeeCard key={item.id} data={item}></CoffeeCard>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((item) => (
+              <CoffeeCard key={item.id} data={item}></CoffeeCard>
+            ))}
+          </div>
         </div>
       </div>
     </>
